@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":shared"))
     testImplementation(kotlin("test"))
     // 样本代码用到的协程 / 反射
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")

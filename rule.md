@@ -40,3 +40,10 @@
 | Project                  | DEPENDS_ON_EXTERNAL | ExternalPackage      |
 | Function, Method         | CALLS               | Function, Method     |
 
+### CALLS 场景覆盖
+
+- **跨类**：类 A 的方法调用类 B 的方法（如 `cases/calls/CrossClassCallChain.kt` 中 ChainA→ChainB→ChainC）。
+- **跨文件**：文件 A 中的函数/类调用文件 B 中的函数/类（如 `CrossFileA.kt`→`CrossFileB.kt`→`CrossFileC.kt`）。
+- **跨模块**：根模块调用子模块 `shared` 的 API（如 `cases/modules/CrossModuleUsage.kt`）。
+- **Kotlin-Java 互调**：Kotlin 调用 Java（`cases/interop/KotlinJavaInterop.kt` → `JavaUtils`/`JavaService`）；Java 调用 Kotlin（`JavaService.java` → `CoreAnnotations`/`CoreSingleton`/`TypeSystemKt`）。
+
